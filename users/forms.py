@@ -7,7 +7,7 @@ class CustomUserCreationForm(UserCreationForm):
 
 	class Meta(UserCreationForm.Meta):
 		model = CustomUser
-		fields = ('first_name', 'last_name', 'email', 'username', 'date_of_birth')
+		fields = ('first_name', 'last_name', 'email', 'username', 'gender', 'date_of_birth')
 		# fields = UserCreationForm.Meta.fields + ('first_name', 'last_name', 'date_of_birth')
 		widgets = {
 			'date_of_birth' : forms.DateInput(format=('%m%d%Y'), attrs={'class':'form-control', 'placeholder':'Select a date', 'type':'date'})
